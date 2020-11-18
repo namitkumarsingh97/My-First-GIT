@@ -4,6 +4,7 @@ int main()
 	int d,n,sum=0;
 	printf("Enter any number");
 	scanf("%d",&n);
+	int a=n;
 	while(n>0)
 	{
 	d=n%10;
@@ -13,6 +14,6 @@ int main()
 	if(n==sum)
 	printf("Palendrome Number");
 	else
-	("Not Palendrome Number");	
+	printf("Not Palendrome Number");	
 }
 

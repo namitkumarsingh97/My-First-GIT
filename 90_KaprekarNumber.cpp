@@ -18,6 +18,8 @@ int main()
 	if(d%2==0)
 	{
 		number=pow(10,d/2);
+		printf("number: %d",number);
+		printf("\n");
 		q=s/number;
 		r=s%number;
 		printf("Quotient: %d",q);
@@ -30,6 +32,8 @@ int main()
 	else
 	{
 		number=pow(10,(d/2)+1);
+		printf("number: %d",number);
+		printf("\n");
 		q=s/number;
 		r=s%number;
 		printf("Quotient: %d",q);
@@ -46,7 +50,7 @@ int main()
 	}
 	else
 	{
-		printf("This Number is not Kaprekar number");
+		printf("This Number is not a Kaprekar number");
 	}
 }
 

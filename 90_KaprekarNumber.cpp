@@ -2,7 +2,7 @@
 #include<math.h>
 int main()
 {
-	int n,s,count,d,q,r,number,sum;
+	int n,s,count=0,q,r,number,sum;
 	printf("Enter any number\n");
 	scanf("%d",&n);
 	s=(n*n);
@@ -13,11 +13,11 @@ int main()
 		s=s/10;
 		count++;
 	}
-	printf("Total Number Of Digits in Square Root: %d",d=count-1);
+	printf("Total Number Of Digits in Square Root: %d",count);
 	printf("\n");
-	if(d%2==0)
+	if(count%2==0)
 	{
-		number=pow(10,d/2);
+		number=pow(10,count/2);
 		printf("number: %d",number);
 		printf("\n");
 		q=s/number;
@@ -31,7 +31,7 @@ int main()
 	}
 	else
 	{
-		number=pow(10,(d/2)+1);
+		number=pow(10,(count/2)+1);
 		printf("number: %d",number);
 		printf("\n");
 		q=s/number;

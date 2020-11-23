@@ -1,27 +1,27 @@
 #include<stdio.h>
 int main()
 {
-	int a[5],i,b,sum=0;
+	int a[5],b[4],i,sum=0;
 	for(i=0;i<5;i++)
 	scanf("%d",&a[i]);
 	
 	for(i=0;i<4;i++)
-	b=a[i]-a[i+1];
+	b[i]=a[i]-a[i+1];
 	
-	if(b<0)
+	if(b[i]<0)
 	{
-		b=b*(-1);
+		b[i]=b[i]*(-1);
 		for(i=0;i<4;i++)
-		printf(" %d",b);
+		printf(" %d",b[i]);
 	}
 	else
 	{
 		for(i=0;i<4;i++)
-		printf(" %d",b);
+		printf(" %d",b[i]);
 	}
 	
 	for(i=0;i<4;i++)
-	sum=sum+b;
+	sum=sum+b[i];
 	printf("\n%d",sum);
 	
 }

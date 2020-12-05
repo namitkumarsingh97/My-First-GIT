@@ -27,6 +27,7 @@ int main()
 	{
 		int mul=1,i;
 		for(i=d;i>=1;i--)
-		mul=mul*i;
+		{mul=mul*i;}
+		printf("%d",mul);
 		return(mul);
 	}

@@ -4,13 +4,24 @@ float sum(float, float);
 float sub(float, float);
 float mul(float, float);
 float div(float, float);
-float bmi(float,float);
+float bmi(float, float);
+float bmr(float, float, float);
+float bmr2(float, float, float);
 int main()
 {
-	float num1, num2, result, result1, result2, result3, result4;
+	float num1, num2, num3, result, result1, result2, result3, result4, result5, result6;
 	char operation;
-	printf("Enter an operation (+, -, *, /, B): ");
+	printf("For Addition +\n");
+	printf("For Subtraction -\n");
+	printf("For Multiplication *\n");
+	printf("For Division /\n");
+	printf("For BMI B\n");
+	printf("For BMR for Men b\n");
+	printf("For BMR for Women b--\n");
+	printf("Enter an operation (+, -, *, /, B, b): ");
     scanf("%c", &operation);
+    printf("Incase of BMI: Enter num1 as your mass in (kg) and num2 as your height in (cm)\n");
+    printf("Incase of BMR: Enter weight in (kg) height in (cm)\n");
 	printf("Enter 2 Values: ");
 	scanf("%f %f",&num1,&num2);
 	switch (operation)
@@ -32,25 +43,26 @@ int main()
 		printf("\nDivision of 2 numbers is: %.2f",result3);
 		break;
 		case 'B':
-		printf("\nEnter num1 as your mass in (kg) and num2 as your height in (cm)\n");	
 		result4 = bmi(num1, num2);
 		printf("\nYour BMI is: %.2f ",result4);
 		printf("kg/m2\n");
-		if(16.0<=result4<=18.5)
-		{
-			printf("UnderWeight");
-		}
-		else if(18.5<result4<=25.0)
-		{
-			printf("Normal");
-		}
-		else if(25.0<result4<=40.0)
-		{
-			printf("OverWeight");
-		}
 		printf("\nUnderWeight: 16.0 - 18.5");
 		printf("\nNormal: 18.5 - 25.0");
 		printf("\nOverWeight: 25.0 - 40.0");
+		break;
+		case 'b':
+		printf("Age in (years): ");	
+	    scanf("%f",&num3);
+		result5 = bmr(num1, num2, num3);
+		printf("\nYour BMR is: %.2f ",result5);
+		printf("Kcal/Day");
+		break;
+		case 'b--':
+		printf("Age in (years): ");	
+	    scanf("%f",&num3);
+		result6 = bmr2(num1, num2, num3);
+		printf("\nYour BMR is: %.2f ",result6);
+		printf("Kcal/Day");
 		break;
 	}
 	return 0;
@@ -89,4 +101,18 @@ int main()
 	num7 = num1 / pow(num2,2);
 	num7 = num7 * 10000;
 	return (num7);	
+	}
+	
+	float bmr(float num1,float num2, float num3)	//BMR Function For Man
+	{
+	float num8;
+	num8 = 66.47+(13.75*num1)+(5.003*num2)-(6.755*num3);
+	return (num8);	
+	}
+	
+	float bmr2(float num1,float num2, float num3)	//BMR Function For Woman
+	{
+	float num9;
+	num9 = 655.1+(9.563*num1+(1.85*num2)-(4.676*num3);
+	return (num9);	
 	}

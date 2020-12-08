@@ -6,7 +6,7 @@ float mul(float, float);
 float div(float, float);
 float bmi(float, float);
 float bmr(float, float, float);
-float bmr2(float, float, float);
+float bmrf(float, float, float);
 int main()
 {
 	float num1, num2, num3, result, result1, result2, result3, result4, result5, result6;
@@ -17,8 +17,8 @@ int main()
 	printf("For Division /\n");
 	printf("For BMI B\n");
 	printf("For BMR for Men b\n");
-	printf("For BMR for Women b--\n");
-	printf("Enter an operation (+, -, *, /, B, b): ");
+	printf("For BMR for Women b-\n");
+	printf("Enter an operation (+, -, *, /, B, b, b-): ");
     scanf("%c", &operation);
     printf("Incase of BMI: Enter num1 as your mass in (kg) and num2 as your height in (cm)\n");
     printf("Incase of BMR: Enter weight in (kg) height in (cm)\n");
@@ -57,10 +57,10 @@ int main()
 		printf("\nYour BMR is: %.2f ",result5);
 		printf("Kcal/Day");
 		break;
-		case 'b--':
+		case 'b-':
 		printf("Age in (years): ");	
 	    scanf("%f",&num3);
-		result6 = bmr2(num1, num2, num3);
+		result6 = bmrf(num1, num2, num3);
 		printf("\nYour BMR is: %.2f ",result6);
 		printf("Kcal/Day");
 		break;
@@ -110,9 +110,9 @@ int main()
 	return (num8);	
 	}
 	
-	float bmr2(float num1,float num2, float num3)	//BMR Function For Woman
+	float bmrf(float num1,float num2, float num3)	//BMR Function For Woman
 	{
 	float num9;
-	num9 = 655.1+(9.563*num1+(1.85*num2)-(4.676*num3);
+	num9 = 655.1+(9.563*num1)+(1.85*num2)-(4.676*num3);
 	return (num9);	
 	}
